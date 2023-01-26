@@ -100,7 +100,7 @@ LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_C_INCLUDES)
 include $(TOP)/hardware/samsung_slsi/graphics/$(TARGET_SOC_BASE)/libhwc2.1/Android.mk
 
 LOCAL_CFLAGS := -DHLOG_CODE=0
-LOCAL_CFLAGS += -DLOG_TAG=\"display\"
+LOCAL_CFLAGS += -DLOG_TAG=\"hwc-display\"
 LOCAL_CFLAGS += -Wno-unused-parameter
 ifeq ($(TARGET_BUILD_VARIANT), user)
 LOCAL_CFLAGS += -Wno-unused-variable
@@ -145,7 +145,7 @@ LOCAL_C_INCLUDES += \
 	$(TOP)/hardware/samsung_slsi/graphics/base/libdrmresource
 
 LOCAL_CFLAGS := -DHLOG_CODE=0
-LOCAL_CFLAGS += -DLOG_TAG=\"hwcservice\"
+LOCAL_CFLAGS += -DLOG_TAG=\"hwc-service\"
 
 LOCAL_SRC_FILES := \
 	libhwcService/IExynosHWC.cpp \
@@ -189,7 +189,7 @@ LOCAL_PROPRIETARY_MODULE := true
 LOCAL_HEADER_LIBRARIES := libhardware_legacy_headers libbinder_headers libexynos_headers
 
 LOCAL_CFLAGS := -DHLOG_CODE=0
-LOCAL_CFLAGS += -DLOG_TAG=\"hwcomposer\"
+LOCAL_CFLAGS += -DLOG_TAG=\"hwc-2\"
 
 ifeq ($(BOARD_USES_HWC_SERVICES),true)
 LOCAL_CFLAGS += -DUSES_HWC_SERVICES
@@ -261,7 +261,7 @@ LOCAL_HEADER_LIBRARIES := libhardware_legacy_headers libbinder_headers libexynos
 LOCAL_STATIC_LIBRARIES := libgtest libgmock
 
 LOCAL_CFLAGS := -DHLOG_CODE=0
-LOCAL_CFLAGS += -DLOG_TAG=\"hwcomposer\"
+LOCAL_CFLAGS += -DLOG_TAG=\"hwc-2\"
 
 LOCAL_C_INCLUDES += \
 	$(TOP)/hardware/samsung_slsi/graphics/base/libhwc2.1/unittest \
