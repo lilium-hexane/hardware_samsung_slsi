@@ -13,6 +13,7 @@
 # limitations under the License.
 
 LOCAL_PATH:= $(call my-dir)
+ifeq ($(BOARD_LIBHWJPEG_LEGACY), true)
 include $(CLEAR_VARS)
 
 LOCAL_CFLAGS += -DLOG_TAG=\"exynos-libhwjpeg\"
@@ -39,3 +40,4 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_PROPRIETARY_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
+endif
